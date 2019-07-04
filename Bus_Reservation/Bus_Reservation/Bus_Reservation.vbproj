@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E2BCDD7-EDA3-49D2-B9CB-4D81D103C551}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Bus_Reservation.My.MyApplication</StartupObject>
+    <RootNamespace>Bus_Reservation</RootNamespace>
+    <AssemblyName>Bus_Reservation</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Resources\travel_bus.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Bus_Reservation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Bus_Reservation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvanceBookingCancellation.Designer.vb">
+      <DependentUpon>AdvanceBookingCancellation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceBookingCancellation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSeatBooking.Designer.vb">
+      <DependentUpon>AdvanceSeatBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSeatBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingAdvanceWaiting.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingAdvanceWaiting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingCancellation.Designer.vb">
+      <DependentUpon>BookingCancellation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCancellation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingCancellation2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCancellation2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingCompleted.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCompleted.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingCurrent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingCurrent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingPassengers.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingPassengers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingPassengersAW.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingPassengersAW.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingPassengersC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingPassengersC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingReportsComp.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingReportsComp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusMaster.Designer.vb">
+      <DependentUpon>BusMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancellationSB.Designer.vb">
+      <DependentUpon>CancellationSB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CancellationSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLEAR.Designer.vb">
+      <DependentUpon>CLEAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLEAR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompletedSB.Designer.vb">
+      <DependentUpon>CompletedSB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CompletedSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentSB.Designer.vb">
+      <DependentUpon>CurrentSB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverMaster.Designer.vb">
+      <DependentUpon>DriverMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DriverMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.vb">
+    </Compile>
+    <Compile Include="MDI.Designer.vb">
+      <DependentUpon>MDI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Newuser.Designer.vb">
+      <DependentUpon>Newuser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Newuser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficeMaster.Designer.vb">
+      <DependentUpon>OfficeMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerMaster.Designer.vb">
+      <DependentUpon>PassengerMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking And Passenger.Designer.vb">
+      <DependentUpon>Booking And Passenger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking And Passenger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealMDI.Designer.vb">
+      <DependentUpon>RealMDI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RealMDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAdvanceWaiting.Designer.vb">
+      <DependentUpon>ReportAdvanceWaiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAdvanceWaiting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCancellation.Designer.vb">
+      <DependentUpon>ReportCancellation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCancellation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCompleted.Designer.vb">
+      <DependentUpon>ReportCompleted.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCompleted.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCurrentBooking.Designer.vb">
+      <DependentUpon>ReportCurrentBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCurrentBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsBusMaster.Designer.vb">
+      <DependentUpon>ReportsBusMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsBusMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsDriverMaster.Designer.vb">
+      <DependentUpon>ReportsDriverMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDriverMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsLoginRecords.Designer.vb">
+      <DependentUpon>ReportsLoginRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsLoginRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsOfficeMaster.Designer.vb">
+      <DependentUpon>ReportsOfficeMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsOfficeMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsPassengerMaster.Designer.vb">
+      <DependentUpon>ReportsPassengerMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsPassengerMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsRouteMaster.Designer.vb">
+      <DependentUpon>ReportsRouteMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsRouteMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsStaffMaster.Designer.vb">
+      <DependentUpon>ReportsStaffMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsStaffMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RouteMaster.Designer.vb">
+      <DependentUpon>RouteMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RouteMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPTBusMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTBusMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTDriverMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTDriverMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTLoginRecords.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTLoginRecords.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTOfficeMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTOfficeMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTPassengerMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTPassengerMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTRouteMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTRouteMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTStaffMaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTStaffMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Seat Booking Details.Designer.vb">
+      <DependentUpon>Seat Booking Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seat Booking Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatBooking.Designer.vb">
+      <DependentUpon>SeatBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionLower.Designer.vb">
+      <DependentUpon>SeatSelectionLower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionLower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionLower21.Designer.vb">
+      <DependentUpon>SeatSelectionLower21.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionLower21.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionLower22.Designer.vb">
+      <DependentUpon>SeatSelectionLower22.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionLower22.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionUpper.Designer.vb">
+      <DependentUpon>SeatSelectionUpper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionUpper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionUpper21.Designer.vb">
+      <DependentUpon>SeatSelectionUpper21.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionUpper21.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionUpper22.Designer.vb">
+      <DependentUpon>SeatSelectionUpper22.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatSelectionUpper22.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMaster.Designer.vb">
+      <DependentUpon>StaffMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitingList.Designer.vb">
+      <DependentUpon>WaitingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WaitingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdvanceBookingCancellation.resx">
+      <DependentUpon>AdvanceBookingCancellation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSeatBooking.resx">
+      <DependentUpon>AdvanceSeatBooking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingAdvanceWaiting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingAdvanceWaiting.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingCancellation.resx">
+      <DependentUpon>BookingCancellation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingCancellation2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingCancellation2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingCompleted.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingCompleted.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingCurrent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingCurrent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingPassengers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingPassengers.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingPassengersAW.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingPassengersAW.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingPassengersC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingPassengersC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingReportsComp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingReportsComp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusMaster.resx">
+      <DependentUpon>BusMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancellationSB.resx">
+      <DependentUpon>CancellationSB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLEAR.resx">
+      <DependentUpon>CLEAR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletedSB.resx">
+      <DependentUpon>CompletedSB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentSB.resx">
+      <DependentUpon>CurrentSB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverMaster.resx">
+      <DependentUpon>DriverMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newuser.resx">
+      <DependentUpon>Newuser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeMaster.resx">
+      <DependentUpon>OfficeMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerMaster.resx">
+      <DependentUpon>PassengerMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking And Passenger.resx">
+      <DependentUpon>Booking And Passenger.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealMDI.resx">
+      <DependentUpon>RealMDI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAdvanceWaiting.resx">
+      <DependentUpon>ReportAdvanceWaiting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCancellation.resx">
+      <DependentUpon>ReportCancellation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCompleted.resx">
+      <DependentUpon>ReportCompleted.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCurrentBooking.resx">
+      <DependentUpon>ReportCurrentBooking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsBusMaster.resx">
+      <DependentUpon>ReportsBusMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsDriverMaster.resx">
+      <DependentUpon>ReportsDriverMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsLoginRecords.resx">
+      <DependentUpon>ReportsLoginRecords.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsOfficeMaster.resx">
+      <DependentUpon>ReportsOfficeMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsPassengerMaster.resx">
+      <DependentUpon>ReportsPassengerMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsRouteMaster.resx">
+      <DependentUpon>ReportsRouteMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsStaffMaster.resx">
+      <DependentUpon>ReportsStaffMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RouteMaster.resx">
+      <DependentUpon>RouteMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTBusMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTBusMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTDriverMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTDriverMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTLoginRecords.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTLoginRecords.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTOfficeMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTOfficeMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTPassengerMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTPassengerMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTRouteMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTRouteMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTStaffMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTStaffMaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seat Booking Details.resx">
+      <DependentUpon>Seat Booking Details.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatBooking.resx">
+      <DependentUpon>SeatBooking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionLower.resx">
+      <DependentUpon>SeatSelectionLower.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionLower21.resx">
+      <DependentUpon>SeatSelectionLower21.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionLower22.resx">
+      <DependentUpon>SeatSelectionLower22.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionUpper.resx">
+      <DependentUpon>SeatSelectionUpper.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionUpper21.resx">
+      <DependentUpon>SeatSelectionUpper21.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatSelectionUpper22.resx">
+      <DependentUpon>SeatSelectionUpper22.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMaster.resx">
+      <DependentUpon>StaffMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitingList.resx">
+      <DependentUpon>WaitingList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xbox_menu-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_property-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_property-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_property-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steering_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat_layout_screen_nor_avl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rupee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairs_down-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairs_up-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat_layout_screen_nor_avl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat_layout_tab_nor_lad_avl_rotated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelled_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advance-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travel_bus.ico" />
+    <None Include="Resources\chevron_left_round-48.png" />
+    <None Include="Resources\chevron_right_round-48.png" />
+    <None Include="Resources\start-48.png" />
+    <Content Include="travel_bus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
